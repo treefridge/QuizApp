@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:rowCount="12" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/quizSpinner"
+        android:onClick="deleteQuiz"
+        android:text="@string/button_delQuiz" />
+
+    <Spinner
+        android:id="@+id/quizSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="19dp"
+        android:prompt="@string/selectQuiz" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:onClick="newQuiz"
+        android:text="@string/button_newQuiz" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/SelectExistingQuiz"
+        android:textSize="20sp"
+        android:typeface="normal" 
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/newQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/goQuizSpinnerButton"
+        android:layout_toRightOf="@+id/button2"
+        android:onClick="newQuestion"
+        android:text="@string/button_newQuestion" />
+
+    <Button
+        android:id="@+id/goQuizSpinnerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/newQuestion"
+        android:layout_below="@+id/button1"
+        android:text="@string/goSpinner" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="12dp"
+        android:text="@string/totalQuestions"
+        android:textSize="20sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/goQuizSpinnerButton"
+        android:layout_marginTop="42dp"
+        android:text="@string/StatisticsGrade"
+        android:textSize="20sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/quizGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignLeft="@+id/newQuestion"
+        android:text="@string/quizGrade"
+                android:textSize="20sp"
+        android:layout_marginLeft="32dp"
+         />
+
+    <TextView
+        android:id="@+id/totalQs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:text="@string/totalQs"
+                android:textSize="20sp"
+        android:layout_alignLeft="@+id/quizGrade" />
+
+</RelativeLayout>
